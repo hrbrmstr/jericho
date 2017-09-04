@@ -1,12 +1,13 @@
 #' Convert HTML to Text
 #'
+#' @md
 #' @param x HTML content (length 1 character vector)
 #' @param include_attributes Sets whether any attribute values are included in the output
 #' @return character vector of cleaned text
 #' @export
 #' @examples
 #' fils <- list.files(system.file("extdata", package="jericho"), full.names=TRUE)
-#' for(f in fils) {
+#' for (f in fils) {
 #'   d <- readBin(f, "raw", file.size(f))
 #'   d <- rawToChar(d)
 #'   html_to_text(d)
@@ -23,11 +24,13 @@ html_to_text <- function(x, include_attributes = FALSE) {
 #' the way Mozilla Thunderbird and other email clients provide an automatic conversion
 #' of HTML content to text in their alternative MIME encoding of emails.
 #'
+#' @md
 #' @param x HTML content (length 1 character vector)
 #' @return character vector of cleaned text
 #' @export
 #' @examples
-#' for(f in fils) {
+#' fils <- list.files(system.file("extdata", package="jericho"), full.names=TRUE)
+#' for (f in fils) {
 #'   d <- readBin(f, "raw", file.size(f))
 #'   d <- rawToChar(d)
 #'   render_html_to_text(d)

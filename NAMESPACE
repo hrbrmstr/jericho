@@ -2,5 +2,4 @@
 
 export(html_to_text)
 export(render_html_to_text)
-export(stop_logging)
 import(rJava)

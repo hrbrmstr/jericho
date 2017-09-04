@@ -15,8 +15,7 @@
 #' \dontrun{
 #' stop_logging()
 #' }
-#' @export
 stop_logging <- function() {
-    rJava::J("java.util.logging.LogManager")$getLogManager()$reset()
-    invisible(NULL)
+  rJava::J("java.util.logging.LogManager")$getLogManager()$reset()
+  invisible(NULL)
 }
