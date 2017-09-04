@@ -17,3 +17,10 @@ This provides a human readable version of the segment content that is modelled o
 the way Mozilla Thunderbird and other email clients provide an automatic conversion
 of HTML content to text in their alternative MIME encoding of emails.
 }
+\examples{
+for(f in fils) {
+  d <- readBin(f, "raw", file.size(f))
+  d <- rawToChar(d)
+  render_html_to_text(d)
+}
+}

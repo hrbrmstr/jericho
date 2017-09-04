@@ -1,0 +1,26 @@
+<HTML>
+<HEAD>
+	<title>SegmentTest</title>
+	<meta name="DESCRIPTION" content="Document used to test simple parser operations" />
+	<meta name="keywords" content="document keywords" />
+<BODY>
+<H2>SegmentTest</H2>
+<div id="OuterDiv" style="margin-left: 1em; background: url(images/background.png) repeat-x; behaviour: url( outerdiv.htc );">
+	<p>p1</p>
+	<!--<p>commented p</p>-->
+	<p id="p2">p2</p>
+</div>
+<p class="abc" style="margin-top: 10px">p3</p>
+<p class="abc def">p4</p>
+<p class="abc def ghi" style="background-image: url('images/background-image.png')">p5</p>
+<p class="def		xyz">p6</p>
+<p class="def">p7</p>
+<div id="d1" title="find text 1"> find text 2 <div id="d2"><div id="d3">find text 3</div> <div id="d4">bla</div> find text 4</div></div> find text 5
+<%server tag%>
+<%=serverVariable%>
+<%--server comment--%>
+<%@page attribute="jsp page directive" %>
+<jsp:directive.page attribute="XML jsp page directive" />
+<\%escaped server tag%>
+<#unregistered tag type#>
+</html>

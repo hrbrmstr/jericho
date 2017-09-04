@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>Jericho HTML Parser Test Document</title>
+</head>
+<body>
+<H2>Test HTML Document</H2>
+<script language="javascript" type="text/javascript">   
+ document.writeln("<p>This P element is ignored during a full sequential parse, which automatically treats script element content as CDATA, but it is recognised in parse on demand mode due to efficiency limitations.</p>");
+</script>
+<script language="javascript" type="text/javascript">
+ //<![CDATA[
+  document.writeln("<p>Both the P element and the CDATA section are ignored by the parser during a full sequental parse, but the explicit CDATA section is recognised in parse on demand mode.</p>");
+ //]]>
+</script>
+<script language="javascript" type="text/javascript">
+ //<!--
+  document.writeln("<p>Both the P element and the comment are ignored by the parser during a full sequental parse, but the comment is recognised in parse on demand mode.</p>");
+ //-->
+ document.writeln("<p>This paragraph is not recognised during full sequential parse as it is still inside the script element. Prior to v3.3 it was recognised as the end of the comment terminated the implicit CDATA content.</p>");
+</script>
+<script language="javascript" type="text/javascript">
+ //<!--
+  document.writeln("<p>This literal containing the text '</script' terminates the script during full sequential parse, but not in parse on demand mode as it is enclosed in a comment.</p>");
+	document.writeln("<p>This paragraph is recognised during full sequential parse as the script was terminated by the javascript string literal above.</p>");
+ //-->
+ document.writeln("<p>This paragraph is recognised in both modes.</p>");
+</script>
+</body>
+</html>

@@ -8,6 +8,7 @@ Authors@R: c(
     person("Martin", "Jericho", role = c("ctb"), comment = "Jericho HTML Parser")
   )
 Maintainer: Bob Rudis <bob@rud.is>
+SystemRequirements: Java
 Description: Structured 'HTML' content can be useful when you need to parse data tables
     or other tagged data from within a document. However, it is also useful to obtain
     "just the text" from a document free from the walls of tags that surround it. Tools

@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>Jericho HTML Parser Test Document</title>
+</head>
+<body>
+<H2>Test HTML Document</H2>
+<style>
+ /* <p>This paragraph is correctly ignored during a full sequential parse but it is recognised in parse on demand mode due to efficiency limitations</p> */
+ <!--
+  h2 {color:green}
+  This comment is correctly ignored during a full sequential parse but it is recognised in parse on demand mode due to efficiency limitations
+ -->
+</style>
+<style>
+ <!--
+</style>
+<p>
+ This paragraph is recognised during full sequential parse because the comment start delimiter in the style element above is correctly ignored.
+ But in parse on demand mode the comment is recognised and this paragraph is inside it, so the paragraph is not recognised.
+</p>
+<style>
+ /*
+  This style element is recognised during full sequential parse because the comment start delimiter in the style element above is ignored.
+  But in parse on demand mode the comment is recognised and this style element is inside it, so is not recognised, although its end tag is recognised as the end of the previous style start tag.
+ */
+ -->
+</style>
+</body>
+</html>
