@@ -19,7 +19,7 @@ Convert HTML to Text
 }
 \examples{
 fils <- list.files(system.file("extdata", package="jericho"), full.names=TRUE)
-for(f in fils) {
+for (f in fils) {
   d <- readBin(f, "raw", file.size(f))
   d <- rawToChar(d)
   html_to_text(d)

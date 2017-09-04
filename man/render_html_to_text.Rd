@@ -18,7 +18,8 @@ the way Mozilla Thunderbird and other email clients provide an automatic convers
 of HTML content to text in their alternative MIME encoding of emails.
 }
 \examples{
-for(f in fils) {
+fils <- list.files(system.file("extdata", package="jericho"), full.names=TRUE)
+for (f in fils) {
   d <- readBin(f, "raw", file.size(f))
   d <- rawToChar(d)
   render_html_to_text(d)
