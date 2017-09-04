@@ -3,6 +3,8 @@
 
 Structured 'HTML' content can be useful when you need to parse data tables or other tagged data from within a document. However, it is also useful to obtain "just the text" from a document free from the walls of tags that surround it. Tools are provied that wrap methods in the 'Jericho HTML Parser' Java library by Martin Jericho <http://jericho.htmlparser.net/docs/index.html>. Martin's library is used in many at-scale projects, icluding the 'The Internet Archive'.
 
+As a result of using a Java library, this package requires `rJava`.
+
 The following functions are implemented:
 
 -   `html_to_text`: Convert HTML to Text
@@ -56,7 +58,7 @@ library(testthat)
 date()
 ```
 
-    ## [1] "Mon Sep  4 12:40:10 2017"
+    ## [1] "Mon Sep  4 12:45:17 2017"
 
 ``` r
 test_dir("tests/")
