@@ -1,4 +1,6 @@
 
+[![Build Status](https://travis-ci.org/hrbrmstr/jericho.svg?branch=master)](https://travis-ci.org/hrbrmstr/jericho) [![Build status](https://ci.appveyor.com/api/projects/status/nosmgh0b2wthjjf3/branch/master?svg=true)](https://ci.appveyor.com/project/hrbrmstr/jericho/branch/master)
+
 `jericho` : Break Down the Walls of 'HTML' Tags into Usable Text
 
 Structured 'HTML' content can be useful when you need to parse data tables or other tagged data from within a document. However, it is also useful to obtain "just the text" from a document free from the walls of tags that surround it. Tools are provied that wrap methods in the 'Jericho HTML Parser' Java library by Martin Jericho <http://jericho.htmlparser.net/docs/index.html>. Martin's library is used in many at-scale projects, icluding the 'The Internet Archive'.
@@ -58,7 +60,7 @@ library(testthat)
 date()
 ```
 
-    ## [1] "Mon Sep  4 13:06:20 2017"
+    ## [1] "Mon Sep  4 13:28:01 2017"
 
 ``` r
 test_dir("tests/")
