@@ -2,4 +2,5 @@
 
 export(html_to_text)
 export(render_html_to_text)
+import(jerichojars)
 import(rJava)

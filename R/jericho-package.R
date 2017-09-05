@@ -11,5 +11,5 @@
 #' @name jericho
 #' @docType package
 #' @author Bob Rudis (bob@@rud.is)
-#' @import rJava
+#' @import rJava jerichojars
 NULL
