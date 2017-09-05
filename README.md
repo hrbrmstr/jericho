@@ -1,5 +1,5 @@
 
-[![Build Status](https://travis-ci.org/hrbrmstr/jericho.svg?branch=master)](https://travis-ci.org/hrbrmstr/jericho) [![Build status](https://ci.appveyor.com/api/projects/status/nosmgh0b2wthjjf3/branch/master?svg=true)](https://ci.appveyor.com/project/hrbrmstr/jericho/branch/master)
+[![Build Status](https://travis-ci.org/hrbrmstr/jericho.svg?branch=master)](https://travis-ci.org/hrbrmstr/jericho) [![Build status](https://ci.appveyor.com/api/projects/status/nosmgh0b2wthjjf3/branch/master?svg=true)](https://ci.appveyor.com/project/hrbrmstr/jericho/branch/master) [![codecov](https://codecov.io/gh/hrbrmstr/jericho/branch/master/graph/badge.svg)](https://codecov.io/gh/hrbrmstr/jericho)
 
 `jericho` : Break Down the Walls of 'HTML' Tags into Usable Text
 
@@ -14,7 +14,10 @@ The following functions are implemented:
 
 ### Installation
 
+If you do use `devtools`, then it *should* pickup the `Remotes:` section in `DESCRIPTION`. Until the package is on CRAN, you might want to also invoke the installation of `jerichojars` as shown below:
+
 ``` r
+devtools::install_github("hrbrmstr/jerichojars")
 devtools::install_github("hrbrmstr/jericho")
 ```
 
@@ -60,7 +63,7 @@ library(testthat)
 date()
 ```
 
-    ## [1] "Mon Sep  4 13:28:01 2017"
+    ## [1] "Mon Sep  4 21:33:17 2017"
 
 ``` r
 test_dir("tests/")

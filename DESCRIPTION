@@ -1,7 +1,7 @@
 Package: jericho
 Type: Package
 Title: Break Down the Walls of 'HTML' Tags into Usable Text
-Version: 0.1.0
+Version: 0.2.0
 Date: 2017-09-04
 Authors@R: c(
     person("Bob", "Rudis", role = c("aut", "cre"), email = "bob@rud.is"),
@@ -23,5 +23,7 @@ Suggests:
     covr
 Depends:
     R (>= 3.2.0),
-    rJava
+    rJava,
+    jerichojars
 RoxygenNote: 6.0.1
+Remotes: hrbrmstr/jerichojars

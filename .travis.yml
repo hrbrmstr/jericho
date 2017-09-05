@@ -2,5 +2,7 @@ language: r
 cache: packages
 r_packages:
   - covr
+r_github_packages:
+  - hrbrmstr/jerichojars
 after_success:
   - Rscript -e 'library("covr");codecov()'
