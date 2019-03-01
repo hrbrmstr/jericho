@@ -22,12 +22,11 @@ The following functions are implemented:
 If you do use `devtools`, then it *should* pickup the `Remotes:` section in `DESCRIPTION`. Until the package is on CRAN, you might want to also invoke the installation of `jerichojars` as shown below:
 
 ```{r eval=FALSE}
-devtools::install_github("hrbrmstr/jerichojars")
-devtools::install_github("hrbrmstr/jericho")
+install.packages(c("jerichojars", "jericho"), repos = "https://cinc.rud.is/")
 ```
 
 ```{r message=FALSE, warning=FALSE, error=FALSE, include=FALSE}
-options(width=120)
+options(width = 120)
 ```
 
 ### Usage
@@ -42,7 +41,7 @@ packageVersion("jericho")
 
 URL <- "https://blogs.nasa.gov/spacestation/2017/09/02/touchdown-expedition-52-back-on-earth/"
   
-doc <- paste0(readr::read_lines(URL), collapse="\n")
+doc <- paste0(readr::read_lines(URL), collapse = "\n")
 ```
 
 This is pure text extraction:
@@ -59,14 +58,9 @@ render_html_to_text(doc)
 
 You should run each to see and compare the output (GitHub markdown documents aren't the best viewing medium).
 
-### Test Results
+### `jericho` Metrics
 
-```{r message=FALSE, warning=FALSE, error=FALSE}
-library(jericho)
-library(testthat)
-
-date()
-
-test_dir("tests/")
+```{r cloc, echo=FALSE}
+cloc::cloc_pkg_md()
 ```
 

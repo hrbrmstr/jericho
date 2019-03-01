@@ -6,6 +6,7 @@ import java.io.*;
 import java.net.*;
 
 public class App {
+
   public static String html_to_text(String x, boolean include_attributes) throws Exception {
     try {
       Source source = new Source(x);
@@ -17,6 +18,7 @@ public class App {
       return("");
     }
   }
+  
   public static String render_html_to_text(String x) throws Exception {
     try {
       Source source = new Source(x);
